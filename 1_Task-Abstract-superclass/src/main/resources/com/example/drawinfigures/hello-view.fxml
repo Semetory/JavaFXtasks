@@ -26,7 +26,6 @@
             <Label text="Толщина:"/>
             <Slider fx:id="thicknessSlider" min="1" max="10" value="2" showTickMarks="true"
                     showTickLabels="true" majorTickUnit="1" prefWidth="120"/>
-
         </HBox>
     </top>
 

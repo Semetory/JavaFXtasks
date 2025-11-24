@@ -1,10 +1,6 @@
 package com.example.task2fabrik;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-
-
-import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;

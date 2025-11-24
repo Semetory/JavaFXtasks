@@ -181,8 +181,6 @@ public class HelloController {
         }
     }
 
-// ------------------- кнопки выбора режимов -------------------
-
     @FXML private void onPen(ActionEvent e) { mode = DrawMode.PEN; }
     @FXML private void onEraser(ActionEvent e) { mode = DrawMode.ERASE; }
     @FXML private void onRectangleClick(ActionEvent e) { mode = DrawMode.RECTANGLE; }

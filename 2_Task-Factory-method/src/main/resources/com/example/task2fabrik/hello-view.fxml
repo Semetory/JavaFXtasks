@@ -16,7 +16,6 @@
             <Button text="Нарисовать" onAction="#addPicker"/>
         </FlowPane>
     </top>
-
     <center>
         <Canvas fx:id="can" width="300" height="300"/>
     </center>

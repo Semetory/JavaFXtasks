@@ -8,7 +8,7 @@ import java.util.zip.Deflater;
 public class PngWriter {
 
     public static void write(OutputStream os, int width, int height, byte[] rgba) throws IOException {
-        // PNG сигнатура
+        //PNG сигнатура
         os.write(new byte[]{
                 (byte) 137, 80, 78, 71, 13, 10, 26, 10
         });
@@ -22,11 +22,11 @@ public class PngWriter {
         byte[] data = new byte[13];
         writeInt(data, 0, w);
         writeInt(data, 4, h);
-        data[8] = 8;     // bit depth
-        data[9] = 6;     // color type RGBA
-        data[10] = 0;    // compression
-        data[11] = 0;    // filter
-        data[12] = 0;    // interlace
+        data[8] = 8;     //bit depth
+        data[9] = 6;     //color type RGBA
+        data[10] = 0;    //compression
+        data[11] = 0;    //filter
+        data[12] = 0;    //interlace
 
         writeChunk(os, "IHDR", data);
     }
@@ -44,7 +44,7 @@ public class PngWriter {
             dst += w * 4;
         }
 
-        // Сжимаем через Deflater (zlib)
+        //Сжимаем через Deflater (zlib)
         Deflater deflater = new Deflater(6);
         deflater.setInput(raw);
         deflater.finish();
@@ -61,8 +61,6 @@ public class PngWriter {
     private static void writeIEND(OutputStream os) throws IOException {
         writeChunk(os, "IEND", new byte[0]);
     }
-
-    // --------------- UTIL ---------------
 
     private static void writeChunk(OutputStream os, String type, byte[] data) throws IOException {
         writeInt(os, data.length);
